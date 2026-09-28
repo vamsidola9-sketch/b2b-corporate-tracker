@@ -1,0 +1,238 @@
+/* --- RESET & GLOBAL STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex; /* Aligns Sidebar and Main Content side-by-side */
+    background-color: #f4f6f9; /* Soft corporate light grey background */
+    color: #333;
+    min-height: 100vh;
+}
+
+/* --- SIDEBAR DESIGN --- */
+.sidebar {
+    width: 250px;
+    background-color: #1e293b; /* Deep slate corporate blue */
+    color: #fff;
+    padding: 2rem 1.5rem;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #38bdf8; /* Bright sky blue accent logo text */
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.sidebar li:hover, .sidebar li.active {
+    background-color: #334155; /* Darker highlights when hovering */
+    color: #38bdf8;
+}
+
+/* --- MAIN CONTENT LAYOUT --- */
+.main-content {
+    flex: 1; /* Instructs main section to take up all remaining width */
+    padding: 2rem;
+}
+
+/* Top Header */
+.top-header {
+    display: flex;
+    justify-content: space-between; /* Pushes Title to left, Profile to right */
+    align-items: center;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.user-profile {
+    background: #e2e8f0;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* --- KPI METRICS CARDS GRID --- */
+.metrics-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Auto layouts dynamic cards */
+    gap: 1.5rem;
+}
+
+.card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Soft premium shadow drop */
+    border-left: 5px solid #3b82f6; /* Premium indicator stripe */
+}
+
+.card h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0f172a;
+}
+/* --- INTERACTIVE FORM DESIGN --- */
+.form-container {
+    background: #ffffff;
+    margin-top: 2.5rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.form-container h2 {
+    font-size: 1.2rem;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+}
+
+#project-form {
+    display: flex;
+    flex-wrap: wrap; /* Allows fields to wrap cleanly on mobile screens */
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.form-group input {
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #3b82f6; /* Glow blue when a user clicks into the box */
+}
+
+.submit-btn {
+    background-color: #10b981; /* Premium enterprise green action button */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    height: 46px; /* Matches input height perfectly */
+}
+
+.submit-btn:hover {
+    background-color: #059669; /* Darker green on hover focus */
+}
+/* --- ENTERPRISE DATA TABLE DESIGN --- */
+.table-container {
+    background: #ffffff;
+    margin-top: 2.5rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.table-container h2 {
+    font-size: 1.2rem;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+}
+
+.responsive-table {
+    width: 100%;
+    overflow-x: auto; /* Adds smooth scrolling on small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Removes ugly double margins between cells */
+    text-align: left;
+}
+
+th {
+    background-color: #f8fafc;
+    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+tr:hover {
+    background-color: #f8fafc; /* Subtle highlighting when hovering mouse over rows */
+}
+
+/* Status Pill Badges */
+.badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.badge.active { background-color: #dcfce7; color: #15803d; }
+.badge.completed { background-color: #dbeafe; color: #1d4ed8; }
+.badge.pending { background-color: #fef9c3; color: #a16207; }
+
+/* Delete Action Button */
+.delete-btn {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #fca5a5;
+}
