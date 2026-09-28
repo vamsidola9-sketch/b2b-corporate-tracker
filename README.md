@@ -5,6 +5,7 @@ A high-performance, responsive commercial SaaS enterprise dashboard engineered t
 ## 🚀 Live Demo
 [👉 Click Here to Launch the Live Web App](https://netlify.app)
 
+
 ## 🛠️ System Architecture & Engineering Highlights
 - **Reactive Data Pipeline:** Built an integrated data architecture where frontend user mutations instantly trigger global state metric calculations.
 - **Dynamic Deletion Engine:** Implemented array slicing mutation logic (`splice`) to handle precise item termination with seamless, real-time UI synchronization.
